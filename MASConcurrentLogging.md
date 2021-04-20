@@ -11,7 +11,7 @@ The tool is not impacting your production environment's performance, it is a sma
 
 Description of implementation:
 Create an Automation Script with Action launch point, maybe with name: MASLog. No variables are needed. Enter the code below:
-<p>
+```
 from psdi.server import MXServer
 from psdi.mbo import MboConstants
 from psdi.mbo import MboValue
@@ -52,4 +52,4 @@ if count !=0:
     my_file.flush()
     my_file.close()
     rs1.close()
-</p>
+```    
