@@ -1,5 +1,5 @@
 # License Monitoring tool for evaluation of concurrent users for aiding  Maximo Application Suite tradeup decisions
-## Authored by Tamas Kubicsek, IBM - 2021.04.20
+## Authored by Tamas Kubicsek with guidance from Hubert Duda, IBM - 2021.04.20
 
 This solution is intended to be used for anyone with an existing IBM Maximo who is planning to evaluate how many Maximo Application Suite points would be needed at a potential MAS Tradeup.
 
