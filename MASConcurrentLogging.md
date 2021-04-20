@@ -57,6 +57,13 @@ if count !=0:
 It would look like this one: (please note I used for script name: 'MAS Log' with a space between. Name your script and use that name later in the cron task setup.)
 ![Automation Script](./images/AutomationScript.png)
 
+You can edit the below part of the script if you have in the Users application the Type field filled in, and than you can use that logic to exactly match the points usage.
+```
+#Rule engine below to also put nr of points per user. Edit this and add your user types
+	    if usertype =="TYPE 1": apppoint=5
+	    elif usertype =="TYPE 2": apppoint=10
+	    elif usertype =="TYPE 3": apppoint=10
+```
 ## Create Cron task
 Create the crontask with name for example: MASLog. Class has to be: **_com.ibm.tivoli.maximo.script.ScriptCrontask_**
 Create a cron instance with every 2 minute run, maxadmin as the runasuser.
