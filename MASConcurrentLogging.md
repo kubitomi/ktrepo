@@ -11,7 +11,7 @@ The tool is not impacting your production environment's performance, it is a sma
 
 # Description of implementation:
 ## Create an Automation Script with Action launch point
-Script name could be: **_MASLog_**. No variables are needed. Enter the code below:
+Script name could be: **_MASLog_**. Use **jython** as the script language. No variables are needed. Enter the code below:
 ```
 from psdi.server import MXServer
 from psdi.mbo import MboConstants
@@ -55,7 +55,8 @@ if count !=0:
     rs1.close()
 ```    
 It would look like this one: (please note I used for script name: 'MAS Log' with a space between. Name your script and use that name later in the cron task setup.)
-![CronTask Setup](./images/AutomationScript.png)
+![Automation Script](./images/AutomationScript.png)
+
 ## Create Cron task
 Create the crontask with name for example: MASLog. Class has to be: **_com.ibm.tivoli.maximo.script.ScriptCrontask_**
 Create a cron instance with every 2 minute run, maxadmin as the runasuser.
@@ -63,3 +64,10 @@ Enter the parameter called 'Script name' value MASLog, if you named your Script 
 In the Actions use Reload request to start using the cron.
 It should look the following.
 ![CronTask Setup](./images/CronTaskSetup.png)
+
+## Result CSV file
+It is best to copy the output csv before you open it to not harm the cron task to open the file.
+You could in the spreadsheet group by timestamps the results as a sum of apppoints per each timestamp, and than to take the maximum of that.
+![MonitorResult](./images/MonitorResult.png)
+
+
