@@ -9,8 +9,9 @@ maximum points used, and which time, or you can further analize your usage.
 
 The tool is not impacting your production environment's performance, it is a small footprint code.
 
-Description of implementation:
-Create an Automation Script with Action launch point, maybe with name: MASLog. No variables are needed. Enter the code below:
+# Description of implementation:
+## Create an Automation Script with Action launch point
+Script name could be: **_MASLog_**. No variables are needed. Enter the code below:
 ```
 from psdi.server import MXServer
 from psdi.mbo import MboConstants
@@ -53,3 +54,10 @@ if count !=0:
     my_file.close()
     rs1.close()
 ```    
+
+## Create Cron task
+Create the crontask with name for example: MASLog. Class has to be: **_com.ibm.tivoli.maximo.script.ScriptCrontask_**
+Create a cron instance with every 2 minute run, maxadmin as the runasuser.
+Enter the parameter called 'Script name' value MASLog, if you named your Script earlier as MASLog.
+In the Actions use Reload request to start using the cron.
+It should look the following.
