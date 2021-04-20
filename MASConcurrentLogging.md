@@ -61,4 +61,4 @@ Create a cron instance with every 2 minute run, maxadmin as the runasuser.
 Enter the parameter called 'Script name' value MASLog, if you named your Script earlier as MASLog.
 In the Actions use Reload request to start using the cron.
 It should look the following.
-<img width="1030" alt="add-my-username" src="https://user-images.githubusercontent.com/18093541/63131801-efbd5480-bf8c-11e9-9806-89273f027d16.png">
+![CronTask Setup](./images/CronTaskSetup.png)
