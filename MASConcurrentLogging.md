@@ -54,7 +54,8 @@ if count !=0:
     my_file.close()
     rs1.close()
 ```    
-
+It would look like this one: (please note I used for script name: 'MAS Log' with a space between. Name your script and use that name later in the cron task setup.)
+![CronTask Setup](./images/AutomationScript.png)
 ## Create Cron task
 Create the crontask with name for example: MASLog. Class has to be: **_com.ibm.tivoli.maximo.script.ScriptCrontask_**
 Create a cron instance with every 2 minute run, maxadmin as the runasuser.
